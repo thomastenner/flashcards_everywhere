@@ -1,0 +1,21 @@
+{
+    "name": "Flashcards Everywhere Dev Container",
+    "dockerComposeFile": "docker-compose.yaml",
+    "service": "app",
+    "workspaceFolder": "/workspace",
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "dbaeumer.vscode-eslint",
+          "esbenp.prettier-vscode",
+          "ms-python.python",
+          "ms-azuretools.vscode-docker",
+          "eamodio.gitlens" 
+        ]
+      }
+    },
+    "forwardPorts": [3000, 5432],
+    "postCreateCommand": "npm ci",
+    "postStartCommand": "npm run dev",
+    "remoteUser": "dev"
+  }
